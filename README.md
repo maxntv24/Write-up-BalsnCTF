@@ -15,9 +15,9 @@
 - Sau khi quay lại đọc document của nextjs tôi tìm được từ khóa `one page website` đây là kiểu code mà server gửi các file frontend cho client để hướng dẫn client xử lí giảm gánh nặng cho server. Thế là tôi lục code trong DevTools của trang web
 - Vì file index đã import globalVars nên data cũng được gửi về client
 - ![image](https://user-images.githubusercontent.com/82523299/188365202-1c148fcd-d038-4981-822f-e57cfda31007.png)
-####Flag: BALSN{hybrid_frontend_and_api}
+#### Flag: BALSN{hybrid_frontend_and_api}
 
-###2.Health Check 1
+### 2.Health Check 1
 ![image](https://user-images.githubusercontent.com/82523299/188365589-0033b0b4-77c5-4134-bca1-cdd3b82c0582.png)
 - Access tới trang web và nhận được đoạn json như trên
 - Sau một hồi fuzz thì web này đúng kiểu chẳng có gì cả :((
