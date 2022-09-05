@@ -12,7 +12,7 @@
 - ![image](https://user-images.githubusercontent.com/82523299/188364193-53be8df9-c690-4b56-8680-841609a54592.png)
 - Và tôi tìm mọi cách để có thể injected vào đây ^^, và rồi phát hiện không có cách nào cả
 - Tôi thử search các version của thư viện nhưng đều là last version, ko có lỗi cve => cùng đường :((
-- Sau khi quay lại đọc document của nextjs tôi tìm được từ khóa `one page website` đây là kiểu code mà server gửi các file frontend cho client để hướng dẫn client xử lí giảm gánh nặng cho server. Thế là tôi lục code trong developer tool của trang web
+- Sau khi quay lại đọc document của nextjs tôi tìm được từ khóa `one page website` đây là kiểu code mà server gửi các file frontend cho client để hướng dẫn client xử lí giảm gánh nặng cho server. Thế là tôi lục code trong DevTools của trang web
 - Vì file index đã import globalVars nên data cũng được gửi về client
 - ![image](https://user-images.githubusercontent.com/82523299/188365202-1c148fcd-d038-4981-822f-e57cfda31007.png)
 ####Flag: BALSN{hybrid_frontend_and_api}
@@ -23,6 +23,8 @@
 - Sau một hồi fuzz thì web này đúng kiểu chẳng có gì cả :((
 - Và rồi dùng dirsearch scan thì ra được đường dẫn `http://fastest-healthcheck.balsnctf.com/docs`
 - Tiếp tục fuzz đường dẫn mới và trang mới này cho phép upload 1 file zip chứa 1 file script, sau mỗi 30s server sẽ tự động đi tới và thực thi file script đó, đây là những gì trang web nói, phải đi kiểm chứng thôi ^^
+- ![image](https://user-images.githubusercontent.com/82523299/188367367-baad6a7b-be63-487d-8d94-b3e67f80d815.png)
+
 - Lúc đầu tôi up 1 file script viết bằng python và compile thành file elf vì tôi nghĩ chỉ có elf mới thực thi được và nhận được kết quả
 - ![image](https://user-images.githubusercontent.com/82523299/188365983-ac7b2b5a-7c8a-4685-885d-77bedc966d39.png)
 - Và lại đi google, tôi biết đến bash script bắt đầu thực hiện thôi
@@ -32,6 +34,16 @@
 ![image](https://user-images.githubusercontent.com/82523299/188366605-401882ff-6544-44f2-b9df-bcb7d89a7e47.png)
 - Tiếp đến tôi viết luôn script để vét cạn luôn server ^^
 - ![image](https://user-images.githubusercontent.com/82523299/188367209-ef691870-5ee2-4866-b6d8-0d8844c23cb6.png)
+- ![image](https://user-images.githubusercontent.com/82523299/188368158-e3312c54-d08a-4c6a-a34e-a6ad21be8de1.png)
+- Thấy được file flag nhưng nhìn kĩ thì không có quyền read, sau một hồi lục lọi thì trong folder __pycache__ chưa file pyc của file flag1.py 
+####Flag: BALSN{y37_4n0th3r_pYC4ch3_cHa1leN93???}
+
+###2.Health Check 2
+- Tương tự bài Health Check 1 thì bây h tìm cách lây dc file flag2, nhưng đây không phải file python nên ko nằm trong pycache nữa
+- Tới đây lại khó khăn, tôi bắt đầu nghĩ đến khái niệm leo thang đặc quyền mà tôi hay nghe thấy, bắt đầu search và học và thử khá nhiều cách và tạch cuối cùng cũng tìm ra cách để giải bài này
+- Tôi upload một file docker-entry
+- ![image](https://user-images.githubusercontent.com/82523299/188371435-f5b7ffca-3f0f-4579-b18f-dd133b7bf2ca.png)
+- File này sẽ copy bash vào thư mục data và thiết lập setgid và thực thi shell với egid=1000
 
 
 
