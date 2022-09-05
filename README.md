@@ -38,7 +38,7 @@
 - Thấy được file flag nhưng nhìn kĩ thì không có quyền read, sau một hồi lục lọi thì trong folder __pycache__ chưa file pyc của file flag1.py 
 #### Flag: BALSN{y37_4n0th3r_pYC4ch3_cHa1leN93???}
 
-### 2.Health Check 2
+### 3.Health Check 2
 - Tương tự bài Health Check 1 thì bây h tìm cách lây dc file flag2, nhưng đây không phải file python nên ko nằm trong pycache nữa
 - Tới đây lại khó khăn, tôi bắt đầu nghĩ đến khái niệm leo thang đặc quyền mà tôi hay nghe thấy, bắt đầu search và học và thử khá nhiều cách và tạch cuối cùng cũng tìm ra cách để giải bài này
 - Tôi tìm thầy file này trong source leak ra và nó xử lí file docker-entry 
