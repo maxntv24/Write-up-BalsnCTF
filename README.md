@@ -7,3 +7,5 @@
 
 
 - Vì không quen với kiểu code web routes nên mãi một hồi tôi mới biết được cách endpoine cái api hello để xuất ra secret ![image](https://user-images.githubusercontent.com/82523299/188363885-cba16781-280a-4203-a25c-abc45f6c8fa1.png)
+- Nhưng thứ tôi cần là flag :((
+- Trong source index.js tác giả đã `import globalVars from '../utils/globalVars'`
