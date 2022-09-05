@@ -1,5 +1,5 @@
 # Write-up-BalsnCTF
-###1. my first app
+### 1. my first app
 ![image](https://user-images.githubusercontent.com/82523299/188363439-d3381264-6dc6-467b-aadf-5e1508b4b868.png)
 
 - Bài này được viết bằng nextjs, tôi chưa bao giờ học code js cả nên gặp nextjs là ngáo luôn ^^. Và tôi dành ra 1 tiếng để học cấp tốc tại trang https://nextjs.org/learn
@@ -36,14 +36,17 @@
 - ![image](https://user-images.githubusercontent.com/82523299/188367209-ef691870-5ee2-4866-b6d8-0d8844c23cb6.png)
 - ![image](https://user-images.githubusercontent.com/82523299/188368158-e3312c54-d08a-4c6a-a34e-a6ad21be8de1.png)
 - Thấy được file flag nhưng nhìn kĩ thì không có quyền read, sau một hồi lục lọi thì trong folder __pycache__ chưa file pyc của file flag1.py 
-####Flag: BALSN{y37_4n0th3r_pYC4ch3_cHa1leN93???}
+#### Flag: BALSN{y37_4n0th3r_pYC4ch3_cHa1leN93???}
 
-###2.Health Check 2
+### 2.Health Check 2
 - Tương tự bài Health Check 1 thì bây h tìm cách lây dc file flag2, nhưng đây không phải file python nên ko nằm trong pycache nữa
 - Tới đây lại khó khăn, tôi bắt đầu nghĩ đến khái niệm leo thang đặc quyền mà tôi hay nghe thấy, bắt đầu search và học và thử khá nhiều cách và tạch cuối cùng cũng tìm ra cách để giải bài này
+- Tôi tìm thầy file này trong source leak ra và nó xử lí file docker-entry 
+![image](https://user-images.githubusercontent.com/82523299/188442154-b0e91ad7-80b2-496c-bcdb-36cb0867038c.png)
+
 - Tôi upload một file docker-entry
 - ![image](https://user-images.githubusercontent.com/82523299/188371435-f5b7ffca-3f0f-4579-b18f-dd133b7bf2ca.png)
-- File này sẽ copy bash vào thư mục data và thiết lập setgid và thực thi shell với egid=1000
+- File này sẽ copy bash vào thư mục data và thiết lập setgid và thực thi shell với egid=1000 bơi
 
 
 
