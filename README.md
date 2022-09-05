@@ -58,7 +58,7 @@ int main(void) {
     execl("/usr/bin/cat", "cat", "../../flag2", 0);
 }
 ```
-- File rin script
+- File run script
 ```
 #!/usr/bin/bash
 gcc -o flag flag.c
