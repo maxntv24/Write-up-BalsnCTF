@@ -1,4 +1,4 @@
-# Write-up-BalsnCTF
+# Write-up-BalsnCTF (Web)
 ### 1. my first app
 ![image](https://user-images.githubusercontent.com/82523299/188363439-d3381264-6dc6-467b-aadf-5e1508b4b868.png)
 
